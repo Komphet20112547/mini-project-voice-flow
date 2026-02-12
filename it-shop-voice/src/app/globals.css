@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Deep, calm dark-brown theme */
+  --background: #1b120d; /* main background – very dark brown */
+  --background-2: #241610; /* slightly lighter brown for surfaces */
+  --foreground: #f5e6d3; /* warm light text */
+  --muted: #d0b295; /* softer secondary text */
+  --accent: #c58b57; /* primary accent brown */
+  --accent-hover: #aa6f3e;
+  --card-bg: #241610; /* cards slightly lifted from background */
 }
 
 @theme inline {
@@ -14,13 +20,110 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #120b07;
+    --foreground: #f8ead8;
   }
 }
 
 body {
-  background: var(--background);
+  /* Simple dark-brown vertical gradient */
+  background: linear-gradient(180deg, #1b120d 0%, #150d09 45%, #0f0906 100%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Theme helper classes */
+.container-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  color: var(--foreground);
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  border-radius: 0.6rem;
+  padding: 1.25rem;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.55);
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand .logo {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.14), rgba(197,139,87,0.08));
+  border-radius: 999px;
+  border: 1px solid rgba(197,139,87,0.5);
+}
+
+.badge {
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--muted);
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  padding: 0.55rem 0.95rem;
+  border-radius: 0.45rem;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+}
+
+.btn-primary:hover { background: var(--accent-hover); }
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--foreground);
+  padding: 0.45rem 0.8rem;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.small-muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* secondary text on dark background */
+.text-secondary { color: var(--muted); }
+
+/* Ensure most content text uses the dark foreground for strong contrast;
+   preserve primary button text as white for accessibility */
+.container-inner, .card, .card * {
+  color: var(--foreground);
+}
+.btn-primary, .btn-primary * {
+  color: #fff !important;
+}
+
+/* Improve accessibility: link/button focus */
+a:focus, button:focus {
+  outline: 3px solid rgba(122,82,55,0.12);
+  outline-offset: 2px;
 }

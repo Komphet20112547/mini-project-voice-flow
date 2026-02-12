@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import products from "@/data/products.json";
+import products from "@/app/data/products.json";
 
 export const runtime = "nodejs";
 
@@ -29,7 +29,8 @@ export async function POST(req: Request) {
 
     const data = await resp.json().catch(() => ({}));
     return NextResponse.json(data, { status: resp.ok ? 200 : resp.status });
-  } catch (e: any) {
-    return NextResponse.json({ error: e?.message ?? "Server error" }, { status: 500 });
+  } catch (e: unknown) {
+    const message = e instanceof Error ? e.message : String(e);
+    return NextResponse.json({ error: message ?? "Server error" }, { status: 500 });
   }
 }
