@@ -1,0 +1,14 @@
+[
+  {"sku":"KB-LOGI-K120","name":"Logitech K120 Keyboard","category":"Keyboard","price":399,"stock":18,"warranty_months":12,"tags":["คีย์บอร์ด","usb","ทำงาน"]},
+  {"sku":"MS-LOGI-M185","name":"Logitech M185 Mouse","category":"Mouse","price":349,"stock":25,"warranty_months":12,"tags":["เมาส์","ไร้สาย"]},
+  {"sku":"HD-SSD-1TB","name":"SSD NVMe 1TB Gen3","category":"Storage","price":1890,"stock":7,"warranty_months":36,"tags":["ssd","nvme","1tb"]},
+  {"sku":"HD-HDD-2TB","name":"HDD 2TB 3.5\"","category":"Storage","price":1650,"stock":5,"warranty_months":24,"tags":["hdd","2tb"]},
+  {"sku":"RAM-DDR4-16","name":"RAM DDR4 16GB 3200","category":"RAM","price":1290,"stock":10,"warranty_months":36,"tags":["ram","ddr4","16gb"]},
+  {"sku":"RTR-AX1800","name":"Wi-Fi Router AX1800","category":"Network","price":1490,"stock":6,"warranty_months":24,"tags":["router","wifi6"]},
+  {"sku":"MON-24FHD","name":"Monitor 24\" FHD 75Hz","category":"Monitor","price":3290,"stock":4,"warranty_months":36,"tags":["จอ","24นิ้ว","fhd"]},
+  {"sku":"HDP-USBC-7IN1","name":"USB-C Hub 7-in-1","category":"Accessory","price":990,"stock":12,"warranty_months":12,"tags":["hub","usb-c","hdmi"]},
+  {"sku":"CB-LAN-10M","name":"LAN Cable CAT6 10m","category":"Cable","price":120,"stock":40,"warranty_months":0,"tags":["สายแลน","cat6"]},
+  {"sku":"CAM-1080P","name":"Webcam 1080p","category":"Accessory","price":790,"stock":9,"warranty_months":12,"tags":["เว็บแคม","เรียนออนไลน์"]},
+  {"sku":"HS-USB","name":"USB Headset","category":"Audio","price":650,"stock":8,"warranty_months":12,"tags":["หูฟัง","ไมค์","usb"]},
+  {"sku":"UPS-650VA","name":"UPS 650VA","category":"Power","price":2190,"stock":3,"warranty_months":24,"tags":["ups","สำรองไฟ"]}
+]
